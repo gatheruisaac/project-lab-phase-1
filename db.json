@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Fresh Tomatoes",
+      "price": 50,
+      "image": "https://via.placeholder.com/150?text=Tomatoes"
+    },
+    {
+      "id": 2,
+      "name": "Sukuma Wiki",
+      "price": 30,
+      "image": "https://via.placeholder.com/150?text=Sukuma+Wiki"
+    },
+    {
+      "id": 3,
+      "name": "Unga (2kg)",
+      "price": 200,
+      "image": "https://via.placeholder.com/150?text=Unga+2kg"
+    },
+    {
+      "id": 4,
+      "name": "Onions",
+      "price": 80,
+      "image": "https://via.placeholder.com/150?text=Onions"
+    }
+  ]
+}
