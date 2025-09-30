@@ -4,7 +4,8 @@
 Mtaani Fresh is a **mini e-commerce web app** designed to connect local vendors with buyers in Kenyan neighborhoods.  
 It allows buyers to browse fresh produce, add items to a cart, and checkout in a simple, user-friendly way.  
 
----
+## live demolink
+ https://symphonious-beignet-77b8c0.netlify.app/
 
 ## Features  
 - 🛒 **Product Listings** – Browse fresh produce with names, prices, and images.  
