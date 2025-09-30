@@ -1,75 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mtaani Fresh</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mtaani Fresh — Mini Market</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>🥬 Mtaani Fresh</h1>
-    <p class="tagline">Fresh groceries from your local vendors</p>
-    <p class="intro">
-      Mtaani Fresh connects local vendors directly with buyers, making it easier for small businesses to showcase their products online 
-      while giving customers a convenient way to shop for fresh, affordable groceries. Vendors save time and reduce waste by updating 
-      their stock in real-time, while buyers enjoy transparency, fair prices, and reliable access to everyday essentials.
-    </p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1 class="brand">🥬 Mtaani Fresh</h1>
+        <p class="tagline">Local vendors • Fresh produce • Fair prices</p>
+      </div>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search products or vendor..." aria-label="Search products" />
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="">All categories</option>
+        </select>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Products -->
-    <h2 class="section-title">Available Products</h2>
-    <div id="product-list"></div>
-
-    <!-- How It Works -->
-    <section id="how-it-works">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <h3>1. Browse Products</h3>
-          <p>Explore fresh groceries listed by local vendors directly from your neighborhood.</p>
-        </div>
-        <div class="step">
-          <h3>2. Add to Cart</h3>
-          <p>Select what you need and add items to your cart with just one click.</p>
-        </div>
-        <div class="step">
-          <h3>3. Checkout & Enjoy</h3>
-          <p>Complete your order and get your fresh groceries delivered or picked up with ease.</p>
-        </div>
-      </div>
+  <main class="container main-grid">
+    <section class="products-section">
+      <h2 class="section-title">Available Products</h2>
+      <div id="product-list" class="product-grid" aria-live="polite"></div>
     </section>
 
-    <!-- Why Use -->
-    <section id="why-use">
-      <h2>Why Use Mtaani Fresh?</h2>
-      <div class="benefits">
-        <div class="benefit">
-          <h3>🌽 For Vendors</h3>
-          <p>Showcase your products to a wider customer base, manage inventory in real-time, reduce food waste, and grow your business with ease.</p>
-        </div>
-        <div class="benefit">
-          <h3>🛒 For Buyers</h3>
-          <p>Enjoy a seamless shopping experience with fresh, affordable groceries, transparent pricing, and convenient access to local produce.</p>
-        </div>
+    <aside class="cart-section" id="cart">
+      <h2>🛒 Cart</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-summary">
+        <div class="subtotal">Subtotal: KES <span id="cart-subtotal">0</span></div>
+        <button id="checkoutBtn" class="btn primary">Checkout</button>
+        <button id="whatsappBtn" class="btn ghost">Order via WhatsApp</button>
       </div>
-    </section>
+    </aside>
   </main>
 
-  <!-- Cart -->
-  <aside id="cart">
-    <h2>🛒 Cart</h2>
-    <div id="cart-items"></div>
-    <div id="total">Total: KES 0</div>
-    <button id="checkout">Checkout</button>
-  </aside>
+  <section class="info container">
+    <div class="how">
+      <h3>How It Works</h3>
+      <ol>
+        <li>Browse products from local vendors near you.</li>
+        <li>Add items to your cart and adjust quantities.</li>
+        <li>Checkout — pay on delivery via M-Pesa or confirm via WhatsApp.</li>
+      </ol>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Mtaani Fresh | Supporting local farmers 🌱</p>
+    <div class="benefits">
+      <h3>Why Use Mtaani Fresh</h3>
+      <div class="benefit-grid">
+        <div><strong>For Vendors</strong><p>Grow reach, update stock, reduce spoilage.</p></div>
+        <div><strong>For Buyers</strong><p>Transparent prices, fresh produce, local support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Mtaani Fresh • Built with care for local communities</small>
+    </div>
   </footer>
 
   <script src="script.js"></script>

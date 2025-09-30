@@ -2,27 +2,78 @@
   "products": [
     {
       "id": 1,
-      "name": "Fresh Tomatoes",
-      "price": 50,
-      "image": "https://via.placeholder.com/150?text=Tomatoes"
+      "name": "Fresh Tomatoes (1 Kg)",
+      "price": 120,
+      "category": "Vegetables",
+      "vendorId": 1,
+      "image": "https://images.unsplash.com/photo-1757332334678-e76d258c49c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 30
     },
     {
       "id": 2,
-      "name": "Sukuma Wiki",
+      "name": "Sukuma Wiki (Bunch)",
       "price": 30,
-      "image": "https://via.placeholder.com/150?text=Sukuma+Wiki"
+      "category": "Vegetables",
+      "vendorId": 1,
+      "image": "https://plus.unsplash.com/premium_photo-1702404232486-93f9eeb5f1af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 50
     },
     {
       "id": 3,
-      "name": "Unga (2kg)",
-      "price": 200,
-      "image": "https://via.placeholder.com/150?text=Unga+2kg"
+      "name": "Avocado (Each)",
+      "price": 40,
+      "category": "Fruits",
+      "vendorId": 2,
+      "image": "https://images.unsplash.com/photo-1741515042473-7664f850f7dd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 80
     },
     {
       "id": 4,
-      "name": "Onions",
+      "name": "Unga (2 Kg)",
+      "price": 200,
+      "category": "Staples",
+      "vendorId": 2,
+      "image": "https://plus.unsplash.com/premium_photo-1671377375657-5286f40ec0c7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 20
+    },
+    {
+      "id": 5,
+      "name": "Mango (Each)",
+      "price": 60,
+      "category": "Fruits",
+      "vendorId": 3,
+      "image": "https://images.unsplash.com/photo-1757281096599-b9165ba74008?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 40
+    },
+    {
+      "id": 6,
+      "name": "Onions (1 Kg)",
       "price": 80,
-      "image": "https://via.placeholder.com/150?text=Onions"
+      "category": "Vegetables",
+      "vendorId": 3,
+      "image": "https://plus.unsplash.com/premium_photo-1723708958105-09e29205e551?q=80&w=1144&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 25
     }
-  ]
+  ],
+  "vendors": [
+    {
+      "id": 1,
+      "name": "Mama Akinyi",
+      "location": "Kibera Market",
+      "phone": "254711223344"
+    },
+    {
+      "id": 2,
+      "name": "Mama Wanjiku",
+      "location": "Gikomba",
+      "phone": "254722334455"
+    },
+    {
+      "id": 3,
+      "name": "Mama Atieno",
+      "location": "Kawangware Market",
+      "phone": "254733445566"
+    }
+  ],
+  "orders": []
 }

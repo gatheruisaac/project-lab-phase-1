@@ -1,200 +1,62 @@
-/* General */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f8f9fa;
-  color: #333;
+:root{
+  --green:#2b7a0b;
+  --muted:#6b7280;
+  --bg:#f6f8fa;
+  --card:#fff;
+  --accent:#ff7a18;
+  --container:1100px;
+  --radius:10px;
 }
 
-h1, h2, h3 {
-  margin: 0 0 10px;
-}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif; margin:0; background:var(--bg); color:#1f2937; -webkit-font-smoothing:antialiased}
+.container{max-width:var(--container); margin:0 auto; padding:0 16px}
 
-.section-title {
-  text-align: center;
-  margin: 20px 0;
-  color: green;
-}
+.site-header{background:var(--green); color:white; padding:18px 0}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}
+.brand{margin:0; font-size:1.2rem}
+.tagline{margin:2px 0 0; opacity:0.95; font-size:0.9rem}
+.search-wrap{display:flex; gap:8px; align-items:center}
+.search-wrap input, .search-wrap select{padding:8px 10px; border-radius:6px; border:1px solid rgba(0,0,0,0.08)}
 
-/* Header */
-header {
-  background: green;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+.main-grid{display:grid; grid-template-columns: 1fr 320px; gap:20px; align-items:start; padding:20px 0}
+.section-title{color:var(--green); margin:0 0 12px; text-align:left}
+.product-grid{display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap:16px}
 
-header .tagline {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
+/* Product Card */
+.card{background:var(--card); border-radius:var(--radius); padding:12px; box-shadow:0 1px 6px rgba(16,24,40,0.06); display:flex; flex-direction:column; gap:8px}
+.card img{width:100%; height:140px; object-fit:cover; border-radius:6px}
+.card .meta{display:flex; justify-content:space-between; align-items:center; gap:8px}
+.vendor-badge{font-size:0.8rem; color:var(--muted); border:1px dashed #e6e6e6; padding:4px 6px; border-radius:6px}
+.card h3{margin:0; font-size:1rem}
+.card .price{color:var(--green); font-weight:700}
+.card .controls{display:flex; justify-content:space-between; align-items:center; margin-top:8px}
+.btn{padding:8px 10px; border-radius:8px; cursor:pointer; border:0; font-weight:600}
+.btn.primary{background:var(--green); color:white}
+.btn.ghost{background:transparent; border:1px solid rgba(0,0,0,0.06)}
+.qty-controls{display:flex; gap:8px; align-items:center}
+.qty-controls button{padding:6px 8px; border-radius:6px; border:1px solid #e6e6e6; background:white}
 
-header .intro {
-  max-width: 700px;
-  margin: 10px auto;
-  font-size: 1rem;
-  line-height: 1.5;
-}
+/* Cart */
+.cart-section{background:var(--card); border-radius:8px; padding:12px; box-shadow:0 1px 6px rgba(16,24,40,0.06)}
+.cart-items{max-height:60vh; overflow:auto}
+.cart-row{display:flex; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px dashed #eee; font-size:0.95rem}
+.cart-row .name{flex:1}
+.cart-row .qty{color:var(--muted)}
+.cart-summary{margin-top:12px}
+.subtotal{font-weight:700; text-align:right; margin-bottom:8px}
 
-/* Product Grid */
-#product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  margin-right: 260px; /* leave space for cart */
-}
-
-.product {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.product:hover {
-  transform: translateY(-5px);
-}
-
-.product img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.product h3 {
-  font-size: 1.1rem;
-}
-
-.product p {
-  color: green;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 12px;
-  background: green;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.btn:hover {
-  background: darkgreen;
-}
-
-/* Minimal Cart */
-#cart {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 240px;
-  height: 100%;
-  background: #fafafa;
-  border-left: 2px solid #eee;
-  padding: 15px;
-  font-size: 0.9rem;
-}
-
-#cart h2 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  color: green;
-}
-
-#cart-items {
-  margin-bottom: 10px;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-
-.cart-item span {
-  font-size: 0.85rem;
-}
-
-#total {
-  border-top: 1px solid #ddd;
-  margin-top: 10px;
-  padding-top: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: right;
-}
-
-#checkout {
-  background: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px;
-  width: 100%;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-#checkout:hover {
-  background: darkgreen;
-}
-
-/* Sections */
-#how-it-works, #why-use {
-  background: #fff;
-  padding: 40px 20px;
-  text-align: center;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.steps, .benefits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.step, .benefit {
-  flex: 1 1 250px;
-  background: #f0fdf4;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-.step h3, .benefit h3 {
-  color: darkgreen;
-}
+/* Info sections */
+.info{display:flex; gap:20px; padding:20px 0}
+.how, .benefits{flex:1; background:var(--card); padding:16px; border-radius:10px}
+.benefit-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #333;
-  color: white;
-  margin-top: 20px;
-}
+.site-footer{padding:18px 0; text-align:center; color:var(--muted); margin-top:20px}
 
-/* Mobile Fix */
-@media (max-width: 768px) {
-  #product-list {
-    margin-right: 0;
-  }
-  #cart {
-    position: static;
-    width: 100%;
-    height: auto;
-    border-left: none;
-    border-top: 2px solid #eee;
-    margin-top: 15px;
-  }
+/* Responsive */
+@media (max-width: 900px){
+  .main-grid{grid-template-columns: 1fr; margin-bottom:0}
+  .container{padding:0 12px}
+  .info{flex-direction:column}
 }
